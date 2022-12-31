@@ -1,8 +1,12 @@
-var Fraction = require('./src/fractions');
-var Expression = require('./src/expressions').Expression;
-var Equation = require('./src/equations');
-var Parser = require('./src/parser');
+// var Fraction = require('./src/fractions');
+// var Expression = require('./src/expressions').Expression;
+// var Equation = require('./src/equations');
+// var Parser = require('./src/parser');
 
+import Fraction  from './src/fractions.js';
+import { Expression } from './src/expressions.js';
+import Equation from './src/equations.js';
+import Parser from './src/parser.js';
 
 var parse = function(input){
 	var parser = new Parser();
@@ -28,10 +32,10 @@ var toTex = function(input) {
     }
 };
 
-module.exports = {
-    Fraction: Fraction,
-    Expression: Expression,
-    Equation: Equation,
-    parse: parse,
-    toTex: toTex
+export {
+    Fraction as Fraction,
+    Expression as Expression,
+    Equation as Equation,
+    parse as parse,
+    toTex as toTex
 };

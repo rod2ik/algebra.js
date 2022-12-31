@@ -35,5 +35,6 @@
   "bugs": {
     "url": "https://github.com/nicolewhite/algebra.js/issues"
   },
-  "homepage": "http://algebra.js.org"
+  "homepage": "http://algebra.js.org",
+  "type": "module"
 }

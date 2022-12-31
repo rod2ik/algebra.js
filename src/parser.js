@@ -1,10 +1,10 @@
 'use strict';
 
 
-var Lexer = require('./lexer'),
-    Expression = require('./expressions').Expression,
-    Fraction = require('./fractions'),
-    Equation = require('./equations');
+import Lexer from './lexer.js';
+import { Expression } from './expressions.js';
+import Fraction from './fractions.js';
+import Equation from './equations.js';
 
 var Parser = function() {
     this.lexer = new Lexer();
@@ -226,4 +226,4 @@ Parser.prototype.parseNumber = function() {
     }
 };
 
-module.exports = Parser;
+export default Parser;

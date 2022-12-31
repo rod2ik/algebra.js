@@ -1,6 +1,6 @@
-var Expression = require('./expressions').Expression;
-var isInt = require('./helper').isInt;
-var Fraction = require('./fractions');
+import { Expression } from './expressions.js';
+import { isInt } from './helper.js';
+import Fraction from './fractions.js';
 
 var Complex = function(real, imaginary) {
     if (real instanceof Fraction && imaginary instanceof Fraction) {
@@ -83,4 +83,4 @@ Complex.prototype.divide = function(a) {
     }
 };
 
-module.exports = Complex;
+export default Complex;

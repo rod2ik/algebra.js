@@ -143,4 +143,4 @@ Lexer.prototype._skipnontokens = function() {
   }
 };
 
-module.exports = Lexer;
+export default Lexer;

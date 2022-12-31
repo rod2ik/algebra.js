@@ -63,8 +63,9 @@ var GREEK_LETTERS = [
     'Omega'
 ];
 
-exports.gcd = gcd;
-exports.lcm = lcm;
-exports.isInt = isInt;
-exports.round = round;
-exports.GREEK_LETTERS = GREEK_LETTERS;
+export { gcd as gcd,
+         lcm as lcm,
+         isInt as isInt,
+         round as round,
+         GREEK_LETTERS as GREEK_LETTERS
+};

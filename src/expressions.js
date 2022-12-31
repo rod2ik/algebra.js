@@ -1,6 +1,6 @@
-var Fraction = require('./fractions');
-var isInt = require('./helper').isInt;
-var GREEK_LETTERS = require('./helper').GREEK_LETTERS;
+import Fraction from './fractions.js';
+import { isInt } from './helper.js';
+import { GREEK_LETTERS } from './helper.js';
 
 var Expression = function(variable) {
     this.constants = [];
@@ -454,7 +454,7 @@ Expression.prototype._cubicCoefficients = function() {
     return {a:a, b:b, c:c, d:d};
 };
 
-Term = function(variable) {
+var Term = function(variable) {
     if (variable instanceof Variable) {
         this.variables = [variable.copy()];
     } else if (typeof(variable) === "undefined") {
@@ -742,8 +742,5 @@ Variable.prototype.toTex = function() {
     }
 };
 
-module.exports = {
-    Expression: Expression,
-    Term: Term,
-    Variable: Variable
-};
+
+export { Expression, Term, Variable };

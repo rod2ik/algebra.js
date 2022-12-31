@@ -1,8 +1,8 @@
-var Expression = require('./expressions').Expression;
-var Variable = require('./expressions').Variable;
-var Term = require('./expressions').Term;
-var Fraction = require('./fractions');
-var isInt = require('./helper').isInt;
+import { Expression } from './expressions.js';
+import { Variable } from './expressions.js';
+import { Term } from './expressions.js';
+import Fraction from './fractions.js';
+import { isInt } from './helper.js';
 
 var Equation = function(lhs, rhs) {
     if (lhs instanceof Expression) {
@@ -326,4 +326,4 @@ Equation.prototype._isCubic = function(variable) {
     return this._maxDegree() === 3 && this._onlyHasVariable(variable);
 };
 
-module.exports = Equation;
+export default Equation;

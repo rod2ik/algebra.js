@@ -1,6 +1,6 @@
-var isInt = require('./helper').isInt;
-var gcd = require('./helper').gcd;
-var lcm = require('./helper').lcm;
+import { isInt } from './helper.js';
+import { gcd } from './helper.js';
+import { lcm } from './helper.js';
 
 var Fraction = function(a, b) {
     if (b === 0) {
@@ -214,4 +214,4 @@ Fraction.prototype._cubeRootIsRational = function() {
     return isInt(cbrtNumer) && isInt(cbrtDenom);
 };
 
-module.exports = Fraction;
+export default Fraction;
